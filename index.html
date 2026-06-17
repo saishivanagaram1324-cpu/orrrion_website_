@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orrion — Predictable Patient Acquisition Systems</title>
+  <meta name="description" content="Predictable patient acquisition systems for chiropractors and local health practices. Fill your calendar every week with trackable Google Ads.">
+  <link rel="stylesheet" href="styles.css?v=151">
+  <style>
+    .highlight-circle {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+    }
+    .hand-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 135%;
+      height: 168%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .stat-card .hand-circle {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+      transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .stat-card .highlight-circle.show-circle .hand-circle {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================
+       SECTION 1 — HERO
+       ========================================== -->
+  <section class="hero" id="hero">
+    <div class="hero-red-tint"></div>
+    <!-- Thin Nav Header -->
+    <header class="hero-nav">
+      <div class="container nav-container">
+        <div class="logo">ORRION</div>
+        <a href="#cta" class="nav-cta-link">Book a call</a>
+      </div>
+    </header>
+
+    <div class="container hero-container">
+      <div class="hero-text-content reveal">
+        <h1 class="hero-headline">Your phone should be ringing.<br>It's not.<br>We fix that.</h1>
+        <p class="hero-subheadline-p">Other agencies guess. They run ads, hope something sticks, and send you reports that look impressive but mean nothing.</p>
+        <p class="hero-subheadline-p">We engineer patient acquisition. Every decision is backed by data. Every dollar tracked. You see exactly what's working, every week.</p>
+        <p class="hero-tagline">No guesswork. No fluff. Just a system that fills your calendar.</p>
+        
+        <a href="#cta" class="btn-solid btn-rect">Book a free audit call &rarr;</a>
+        
+        <span class="hero-disclaimer-1">No contracts. No fluff. Just patients.</span>
+        <span class="hero-disclaimer-2">6 health practices helped &middot; Every dollar tracked</span>
+        
+        <div class="hero-scroll-indicator">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="scroll-arrow">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="19 12 12 19 5 12"></polyline>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-image-content reveal">
+        <img src="images/orrion-architect-2.png" alt="Digital Marketing Wizard" class="hero-illustration parallax-element" data-speed="1.05">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 2 — PAIN AGITATION
+       ========================================== -->
+  <section class="pain-section" id="pain">
+    <!-- Layer 1: CSS radial gradient vignette -->
+    <div class="pain-vignette"></div>
+
+    <!-- Layer 2: 5 SVG map pins -->
+    <div class="pain-pins">
+      <div class="map-pin pin-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+      </div>
+      <div class="map-pin pin-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+      </div>
+      <div class="map-pin pin-3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+      </div>
+      <div class="map-pin pin-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+      </div>
+      <div class="map-pin pin-5">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Layer 4: Purely Geometric Foreground Object -->
+    <div class="pain-rect-fg parallax-element" data-speed="1.3">
+      <svg width="380" height="280" viewBox="0 0 380 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M380 0 H0 V280 H380" stroke="white" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <!-- Layer 5: Search Animation -->
+    <div class="pain-search-anim" id="painSearchAnim">
+      <div class="search-bar" id="searchBar">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <div class="search-text-container">
+          <span class="search-text" id="searchText"></span>
+          <span class="search-cursor" id="searchCursor"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="pain-content">
+        <h2 class="pain-headline reveal">Every day you're not on Google, a patient books your competitor.</h2>
+        
+        <p class="pain-paragraph reveal">Most chiropractors spend years perfecting their craft — then leave patient acquisition entirely to chance. <span class="accent-text">No system. No tracking.</span> Just hoping someone walks in, or calls from a Facebook post that got four likes.</p>
+        
+        <p class="pain-paragraph reveal">Meanwhile your competitors are running Google Ads right now. Every search for "chiropractor near me" that you're not showing up for is a patient who just paid someone else — and will keep paying them for years.</p>
+        
+        <p class="pain-paragraph reveal"><span class="accent-text"><strong>That's not a visibility problem. That's a revenue leakage — and it compounds every single month you don't fix it.</strong></span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Pain (Light) to Stakes (Dark) -->
+  <div class="divider-angled" style="background: #FFFFFF;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Minimal Red Tint Shape -->
+      <path d="M0,0 L320,28 L720,10 L1070,35 L1440,15 L1440,80 L0,80 Z" fill="rgba(217, 79, 53, 0.22)"/>
+      <!-- Lighter Grey Shape -->
+      <path d="M0,4 L320,32 L720,14 L1070,39 L1440,19 L1440,80 L0,80 Z" fill="#EAEAEA"/>
+      <!-- Darker Grey Shape -->
+      <path d="M0,22 L380,42 L780,18 L1130,45 L1440,28 L1440,80 L0,80 Z" fill="#242429"/>
+      <!-- Pure Red Shape (blends with Section 3's #D94F35) -->
+      <path d="M0,42 L350,58 L730,35 L1080,55 L1440,45 L1440,80 L0,80 Z" fill="#D94F35"/>
+    </svg>
+  </div>
+
+  <!-- ==========================================
+       SECTION 3 — STAKES (STAT BLOCK)
+       ========================================== -->
+  <section class="stakes-section" id="stakes">
+    <!-- Layer 1: horizontal graph-paper lines -->
+    <div class="stats-grid-lines"></div>
+
+    <div class="container">
+      <h2 class="stakes-headline reveal">The numbers that make <span class="handwritten-wrapper">inaction<svg viewBox="0 0 180 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="brushstroke-underline"><path d="M10 10 C 50 3, 130 4, 170 7" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.95"/><path d="M25 15 C 60 10, 100 11, 135 12" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.85"/></svg></span> expensive.</h2>
+      
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="77" data-suffix="%">0%</div>
+          <div class="stat-label">of patients Google before they book</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="165000" data-suffix="+">0</div>
+          <div class="stat-label">monthly US searches for "chiropractor near me"</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="16" data-prefix="12–" data-suffix="x">0</div>
+          <div class="stat-label">visits per year from a single patient</div>
+        </div>
+        <div class="stat-card stat-card-anchor reveal">
+          <div class="highlight-circle">
+            <div class="stat-number" data-target="1200" data-prefix="$">0</div>
+            <svg class="hand-circle" viewBox="0 0 400 120" preserveAspectRatio="none">
+              <path d="M 60,55 C 80,20 320,15 350,45 C 380,75 320,105 240,108 C 130,112 35,95 45,60 C 50,35 180,25 290,30" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" />
+            </svg>
+          </div>
+          <div class="stat-label">average annual revenue one new patient brings you</div>
+        </div>
+      </div>
+
+      <p class="stakes-closer reveal">One new patient from Google Ads pays for months of ad spend. Every patient you're not getting is a patient paying someone else — repeatedly, for years.</p>
+    </div>
+  </section>
+
+  <!-- Divider: Stakes (Red) to Solution (Light) -->
+  <div class="divider-angled" style="background: #D94F35;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Darker Grey Shape -->
+      <path d="M0,0 L380,25 L780,8 L1120,35 L1440,12 L1440,80 L0,80 Z" fill="#242429"/>
+      <!-- Lighter Grey Shape -->
+      <path d="M0,28 L420,10 L840,42 L1160,20 L1440,36 L1440,80 L0,80 Z" fill="#EAEAEA"/>
+      <!-- Pure White Shape -->
+      <path d="M0,44 L380,24 L740,52 L1100,28 L1440,48 L1440,80 L0,80 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- ==========================================
+       SECTION 4 — SYSTEM DESIGN & OUTCOMES
+       ========================================== -->
+  <section class="combined-system-section" id="solution">
+    <div class="combined-container">
+      <div class="combined-grid-new">
+        
+        <!-- LEFT COLUMN -->
+        <div class="combined-left-col-new">
+          <div class="system-headline-tier1">We do one thing.</div>
+          <h2 class="system-headline-tier2">WE <span class="highlight-circle">ENGINEER<svg class="hand-circle" viewBox="0 0 400 120" preserveAspectRatio="none"><path d="M 60 70 C 60 20, 320 15, 360 45 C 390 70, 360 105, 280 110 C 150 115, 30 100, 30 60 C 30 25, 180 10, 330 25 C 380 35, 390 85, 300 100 C 180 115, 40 95, 45 65" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" /></svg></span> OUTCOMES.</h2>
+          <p class="system-body-new">Other agencies run ads on gut feel and hope something sticks. We build systems — every keyword, every bid, every targeting decision is tested and measured weekly. The numbers only move in one direction: up.</p>
+          
+
+          <div class="what-you-get-list">
+            <div class="what-you-get-item">
+              <span class="wyget-num">01 ·</span>
+              <span class="wyget-title">Your phone rings more.</span>
+            </div>
+            
+            <div class="what-you-get-item">
+              <span class="wyget-num">02 ·</span>
+              <span class="wyget-title">You pay less per patient over time.</span>
+            </div>
+            
+            <div class="what-you-get-item">
+              <span class="wyget-num">03 ·</span>
+              <span class="wyget-title">You see every dollar tracked.</span>
+            </div>
+            
+            <div class="what-you-get-item">
+              <span class="wyget-num">04 ·</span>
+              <span class="wyget-title">You treat patients. We handle the rest.</span>
+            </div>
+          </div>
+          
+          <div class="left-col-footer">
+            <a href="#cta" class="btn-solid btn-pill btn-pill-small">
+              <span class="btn-main-text">Speak To Our Team Today</span>
+              <span class="btn-sub-text">Schedule Your FREE Audit Call Now</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- RIGHT COLUMN -->
+        <div class="combined-right-col-new">
+          <div class="system-subheading">MASTERY DEMANDS FOCUS. SO WE DON'T DO —</div>
+          
+          <div class="rejection-list">
+            <div class="rejection-item">
+              <svg class="rejection-icon" viewBox="0 0 18 18" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="8.25" stroke="#E53E3E" stroke-width="1.5" opacity="0.9" fill="none" />
+                <path d="M6 6L12 12M12 6L6 12" stroke="#E53E3E" stroke-width="1.2" opacity="0.9" />
+              </svg>
+              <span class="rejection-text">SEO RETAINERS</span>
+            </div>
+            
+            <div class="rejection-item">
+              <svg class="rejection-icon" viewBox="0 0 18 18" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="8.25" stroke="#E53E3E" stroke-width="1.5" opacity="0.9" fill="none" />
+                <path d="M6 6L12 12M12 6L6 12" stroke="#E53E3E" stroke-width="1.2" opacity="0.9" />
+              </svg>
+              <span class="rejection-text">FACEBOOK BOOSTING</span>
+            </div>
+            
+            <div class="rejection-item">
+              <svg class="rejection-icon" viewBox="0 0 18 18" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="8.25" stroke="#E53E3E" stroke-width="1.5" opacity="0.9" fill="none" />
+                <path d="M6 6L12 12M12 6L6 12" stroke="#E53E3E" stroke-width="1.2" opacity="0.9" />
+              </svg>
+              <span class="rejection-text">EMAIL NEWSLETTERS</span>
+            </div>
+            
+            <div class="rejection-item">
+              <svg class="rejection-icon" viewBox="0 0 18 18" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="8.25" stroke="#E53E3E" stroke-width="1.5" opacity="0.9" fill="none" />
+                <path d="M6 6L12 12M12 6L6 12" stroke="#E53E3E" stroke-width="1.2" opacity="0.9" />
+              </svg>
+              <span class="rejection-text">SOCIAL MEDIA MANAGEMENT</span>
+            </div>
+            
+            <div class="rejection-item">
+              <svg class="rejection-icon" viewBox="0 0 18 18" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="8.25" stroke="#E53E3E" stroke-width="1.5" opacity="0.9" fill="none" />
+                <path d="M6 6L12 12M12 6L6 12" stroke="#E53E3E" stroke-width="1.2" opacity="0.9" />
+              </svg>
+              <span class="rejection-text">'TRY IT FOR A MONTH' CLIENTS</span>
+            </div>
+          </div>
+          
+          <div class="right-col-concluding">
+            <span class="concluding-light">If you want patients — not promises —</span>
+            <span class="concluding-heavy">we're the last agency you'll ever need.</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Solution (Light) to Proof (Dark) -->
+  <div class="divider-angled" style="background: #FFFFFF;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Lighter Grey Shape -->
+      <path d="M0,0 L350,30 L750,12 L1090,38 L1440,15 L1440,80 L0,80 Z" fill="#EAEAEA"/>
+      <!-- Darker Grey Shape -->
+      <path d="M0,25 L390,45 L800,20 L1150,48 L1440,30 L1440,80 L0,80 Z" fill="#242429"/>
+      <!-- Pure Dark Shape -->
+      <path d="M0,45 L360,60 L750,38 L1100,58 L1440,48 L1440,80 L0,80 Z" fill="#111111"/>
+    </svg>
+  </div>
+
+  <!-- ==========================================
+       SECTION 5 — PROOF
+       ========================================== -->
+  <section class="proof-section" id="proof">
+    <div class="proof-container-new">
+      <div class="proof-split-new">
+        
+        <div class="proof-left-new">
+          <div class="proof-label-new" style="position: relative; z-index: 10;">IT WORKS. HERE'S THE <span class="handwritten-wrapper" style="color: #FFFFFF; z-index: 1; font-size: 24px;">PROOF.<svg viewBox="0 0 180 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="brushstroke-underline" style="width: 88px; bottom: -6px; z-index: 0;"><path d="M10 10 C 50 3, 130 4, 170 7" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.95"/><path d="M25 15 C 60 10, 100 11, 135 12" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.85"/></svg></span></div>
+          <h2 class="proof-headline-new">Patients saw the content. Asked for the address. Showed up.</h2>
+
+
+          <div class="proof-bottom-text">
+            <span class="proof-landing" style="position: relative; display: inline-block;">Imagine what a fully engineered Google Ads system <span style="position: relative; display: inline-block;">does for<svg width="150" height="60" viewBox="0 0 150 60" class="proof-bottom-arrow" style="overflow: visible; opacity: 0.9;">
+                <path d="M 6,10 C 35,48 100,48 135,16" fill="none" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M 108,12 C 117,14 127,15 135,16 C 129,24 122,34 118,44" fill="none" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></span> clinics.
+            </span>
+          </div>
+
+          <a href="#book" class="proof-link-new">Find out what it looks like for your practice &rarr;</a>
+        </div>
+
+        <div class="proof-right-new">
+          <div class="proof-card-new">
+            <img src="Testimonial%201.png" alt="Testimonial 1" class="proof-card-img">
+            <p class="proof-card-caption">Organic content &middot; Real patient asking to visit the clinic</p>
+          </div>
+          <div class="proof-card-new">
+            <img src="Testimonial%202.png" alt="Testimonial 2" class="proof-card-img">
+            <p class="proof-card-caption">382 clicks &middot; 3.68% CTR &middot; 7 weeks &middot; One clinic</p>
+          </div>
+          <div class="proof-card-new">
+            <div style="padding: 12px 64px 8px 64px; text-align: center;">
+              <img src="Testimonial%203.png" alt="Testimonial 3" class="proof-card-img" style="border-radius: 4px; margin: 0 auto;">
+            </div>
+            <p class="proof-card-caption">Verified patient inquiry &middot; Direct booking request</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Angled section divider transition -->
+  <div class="divider-angled">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Darker Grey Shape (overlaps Section 5's #111111 background) -->
+      <path d="M0,0 L350,30 L750,5 L1100,38 L1440,15 L1440,80 L0,80 Z" fill="#242429"/>
+      <!-- Lighter Grey Shape (lays inside Section 6's white background) -->
+      <path d="M0,32 L400,12 L820,48 L1180,22 L1440,40 L1440,80 L0,80 Z" fill="#EAEAEA"/>
+      <!-- Pure White Shape (blends with Section 6) -->
+      <path d="M0,48 L360,28 L720,58 L1080,32 L1440,52 L1440,80 L0,80 Z" fill="#F5F5F0"/>
+    </svg>
+  </div>
+
+  <!-- ==========================================
+       SECTION 6 — ABOUT
+       ========================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-content-wrapper">
+        <div class="about-content reveal">
+          <h2 class="about-headline">We look for a very <span class="handwritten-wrapper underline-specific">specific<svg viewBox="0 0 180 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="brushstroke-underline" style="bottom: -13px; width: 100%; left: 0; opacity: 1;"><path d="M 6,6 C 60,4 120,5 174,8 C 120,12 65,14 32,16 C 68,18 105,19 138,20" fill="none" stroke="#000000" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/></svg></span> kind of client.</h2>
+          <p class="about-paragraph">Not every practice is a FIT for what we do. We work with chiropractors and local health businesses that are <strong>ready to grow</strong> — have capacity for new patients, want real tracking, and understand that paid acquisition is an investment, not an expense.</p>
+          <p class="about-paragraph"><strong>If that's you, you'll have our full attention.</strong> Not a junior account manager. Not a templated campaign. The actual people who built the system, running it for your practice.</p>
+          <div class="about-footer" style="margin-top: 20px;">
+            <a href="#cta" class="btn-solid btn-pill btn-pill-small">
+              <span class="btn-main-text">Speak To Our Team Today</span>
+              <span class="btn-sub-text">Schedule Your FREE Audit Call Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="team-section reveal">
+          <h4 class="team-subheading">Meet The A-Team</h4>
+          <div class="team-cards">
+            <div class="tree-dot"></div>
+            <div class="team-card">
+              <div class="team-photo-wrap">
+                <img src="vardhan.png" alt="Vardhan" class="team-photo-img vardhan-photo">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Vardhan</h3>
+                <span class="team-role">strategy</span>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-photo-wrap">
+                <img src="satwik.png" alt="Satwik" class="team-photo-img">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Satwik</h3>
+                <span class="team-role">creative</span>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-photo-wrap">
+                <img src="vatsal.png" alt="Vatsal" class="team-photo-img vatsal-photo">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Vatsal</h3>
+                <span class="team-role">tech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: About (Light) to Re-agitate (Dark) -->
+  <div class="divider-angled" style="background: #F5F5F0;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Lighter Grey Shape -->
+      <path d="M0,0 L320,28 L720,10 L1070,35 L1440,15 L1440,80 L0,80 Z" fill="#EAEAEA"/>
+      <!-- Darker Grey Shape -->
+      <path d="M0,22 L380,42 L780,18 L1130,45 L1440,28 L1440,80 L0,80 Z" fill="#242429"/>
+      <!-- Pure Dark Shape -->
+      <path d="M0,42 L350,58 L730,35 L1080,55 L1440,45 L1440,80 L0,80 Z" fill="#0A0A0A"/>
+    </svg>
+  </div>
+
+  <!-- ==========================================
+       SECTION 7 — RE-AGITATE
+       ========================================== -->
+  <section class="re-agitate-section reveal" id="re-agitate">
+    <div class="container">
+      <div class="re-agitate-content">
+        <h2 class="re-agitate-headline">
+          <span class="cinematic-wrapper">
+            <span class="cinematic-spacer">Six months</span>
+            <span class="cinematic-phrase">Six months</span>
+          </span><span class="rest-phrase"> from now, one of two things will be <span class="highlight-circle">true<svg class="hand-circle" viewBox="0 0 120 120" preserveAspectRatio="none"><path d="M 60,10 C 85,10 110,35 110,60 C 110,85 85,110 60,110 C 35,110 10,85 10,60 C 10,35 35,10 60,12 C 75,13 95,25 100,45" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" /></svg></span>.</span>
+        </h2>
+        <p class="re-agitate-paragraph"><span class="paragraph-arrow"><svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="43" y2="12"></line><polyline points="36 5 43 12 36 19"></polyline></svg></span>Either you'll have a system bringing in new patients every week — a calendar that fills itself, a practice that grows without you chasing referrals.</p>
+        <p class="re-agitate-paragraph">Or you'll be in the same place. Slightly more frustrated. Watching your competitors show up everywhere you're not.</p>
+        <p class="re-agitate-paragraph">The practices that grow aren't the ones with the best technique. They're the ones that showed up where patients were looking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: Re-agitate (Dark) to CTA (White) -->
+  <div class="divider-angled" style="background: #0A0A0A;">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Layer 1: Dark Grey Shape -->
+      <path d="M0,0 L320,24 L720,8 L1070,30 L1440,12 L1440,80 L0,80 Z" fill="#242429"/>
+      <!-- Layer 2: Light Grey Shape -->
+      <path d="M0,18 L380,38 L780,14 L1130,40 L1440,22 L1440,80 L0,80 Z" fill="#EAEAEA"/>
+      <!-- Layer 3: Minimal Red Tint Shape (on the white side of the transition) -->
+      <path d="M0,32 L360,48 L750,24 L1100,46 L1440,34 L1440,80 L0,80 Z" fill="rgba(217, 79, 53, 0.22)"/>
+      <!-- Layer 4: Pure White Shape (blends with Section 8) -->
+      <path d="M0,38 L350,54 L730,30 L1080,50 L1440,40 L1440,80 L0,80 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- ==========================================
+       SECTION 8 — CTA + FOOTER
+       ========================================== -->
+  <section class="cta-section" id="cta">
+    <!-- Layer 4: Purely Geometric Foreground Object -->
+    <div class="cta-diamond-fg parallax-element" data-speed="1.2">
+      <svg width="424" height="424" viewBox="0 0 424 424" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M212 1 L423 212 L212 423 L1 212 Z" stroke="#000000" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="cta-grid-container reveal">
+        <div class="cta-left-calendly">
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/sai-shivanagaram1324/30min" style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+        </div>
+        
+        <div class="cta-right-content">
+          <div class="cta-profile-img-wrap">
+            <img src="vardhan.png" alt="Vardhan" class="cta-profile-img">
+          </div>
+          <div class="cta-mini-heading">Schedule your call with Vardhan</div>
+          <h2 class="cta-main-heading">Free 20-Minute Practice Audit</h2>
+          <p class="cta-body-p">By the end of this audit call, you will have a clear understanding of the exact leaks in your patient acquisition flow, and a roadmap to generate predictable patient bookings on Google.</p>
+          <p class="cta-body-p">Find a time on Vardhan's calendar to schedule your call today. We look forward to speaking with you!</p>
+          
+          <div class="cta-bullets-heading">This audit call is perfect for:</div>
+          <ul class="cta-bullets-list">
+            <li class="cta-bullet-item">
+              <span class="cta-bullet-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Chiropractors looking to build a <strong>predictable patient acquisition system</strong>.</span>
+            </li>
+            <li class="cta-bullet-item">
+              <span class="cta-bullet-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Local health practices looking to stop wasting budget on <strong>untracked campaigns</strong>.</span>
+            </li>
+            <li class="cta-bullet-item">
+              <span class="cta-bullet-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Practice owners looking to capture <strong>hidden patient demand</strong> searching on Google.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Orrion 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
