@@ -161,6 +161,9 @@ button {
 .mobile-only-btn {
   display: none !important;
 }
+.mobile-br {
+  display: none;
+}
 
 
 /* ==========================================
@@ -1950,16 +1953,79 @@ button {
     display: none !important;
   }
 
-  /* FIX 3 — Engineering outcomes section */
-  .combined-grid-new {
-    grid-template-columns: 1fr !important;
-    gap: 40px !important;
+  /* FIX 1 — Stats section headline */
+  .stakes-headline {
+    font-size: 28px !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+  .stakes-headline .brushstroke-underline {
+    display: none !important;
+  }
+  .stakes-headline .handwritten-wrapper {
+    text-decoration: none !important;
+    border-bottom: none !important;
   }
 
-  .combined-left-col-new, 
-  .combined-right-col-new {
+  /* FIX 2 — Stats section 2x2 grid */
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2px !important;
+    width: 100% !important;
+  }
+  .stat-card {
+    width: auto !important;
+    padding: 20px 16px !important;
+  }
+
+  /* FIX 3 — Hand-drawn circle on $1,200 */
+  .stat-card.stat-card-anchor {
+    padding: 8px !important;
+  }
+  .stat-card-anchor .hand-circle {
+    width: 178.2% !important; /* 148.5% * 1.2 */
+    height: 221.8% !important; /* 184.8% * 1.2 */
+    overflow: visible !important;
+  }
+
+  /* FIX 4 — Engineering outcomes headline */
+  .system-headline-tier2 {
+    font-size: 36px !important;
+  }
+  .system-headline-tier2 .mobile-br {
+    display: block !important;
+  }
+  .system-headline-tier2 .highlight-circle .hand-circle {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 110% !important;
+    height: auto !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+  .system-headline-tier2 .highlight-text {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* FIX 5 — Engineering outcomes two-column stack */
+  .combined-grid-new {
+    display: block !important;
+  }
+  .combined-left-col-new {
+    display: block !important;
     width: 100% !important;
     max-width: 100% !important;
+    margin-bottom: 40px !important;
+  }
+  .combined-right-col-new {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-top: 0 !important;
   }
 
   /* Remove existing large rounded CTA button entirely on mobile */
@@ -1984,6 +2050,7 @@ button {
     border: none !important;
   }
 
+  /* FIX 6 — Engineering outcomes card text */
   .what-you-get-list {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1996,22 +2063,24 @@ button {
     flex: none !important;
     width: auto !important;
     margin: 0 !important;
+    height: auto !important;
+    font-size: 12px !important;
   }
 
   .wyget-title {
-    font-size: 13px !important;
+    font-size: 12px !important;
   }
 
   .wyget-num {
     font-size: 11px !important;
   }
 
-  /* FIX 4 — Section 4 CTA padding */
+  /* Section 4 CTA padding */
   .left-col-footer {
     margin-bottom: 32px !important;
   }
 
-  /* FIX 5 — Proof section */
+  /* FIX 7, 8, 9 — Proof section */
   .proof-bottom-arrow {
     display: none !important;
   }
@@ -2041,10 +2110,14 @@ button {
   }
 
   .proof-card-new:nth-child(1),
-  .proof-card-new:nth-child(2),
-  .proof-card-new:nth-child(3) {
+  .proof-card-new:nth-child(2) {
     transform: none !important;
     margin-top: 0 !important;
+  }
+
+  /* FIX 8 — Remove third proof card */
+  .proof-card-new:nth-child(3) {
+    display: none !important;
   }
 
   /* Disable hover states on mobile */
@@ -2071,25 +2144,43 @@ button {
     transform: scale(1.02) !important;
   }
 
+  /* FIX 9 — Stats visibility in proof section */
+  .proof-stat-row {
+    display: block !important;
+    width: 100% !important;
+    padding: 16px 0 !important;
+  }
   .proof-stat-num {
     font-size: 40px !important;
   }
-
   .proof-stat-label {
     font-size: 13px !important;
     max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-top: 4px !important;
   }
 
   .proof-headline-new {
     font-size: 32px !important;
   }
 
+  /* FIX 7 — Proof section spacing */
+  .proof-bottom-text {
+    margin-bottom: 16px !important;
+  }
+  .proof-link-new {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    font-size: 14px !important;
+    margin-top: 0 !important;
+    max-width: 100% !important;
+  }
+
   .proof-subhead-new,
   .proof-headline-new,
   .proof-label-new,
-  .proof-bottom-text,
-  .proof-landing,
-  .proof-link-new {
+  .proof-landing {
     max-width: 100% !important;
   }
 
@@ -2117,7 +2208,7 @@ button {
     box-shadow: none !important;
   }
 
-  /* FIX 7 — Hand-drawn circle size */
+  /* Hand-drawn circle size */
   .hand-circle {
     width: 148.5% !important;
     height: 184.8% !important;
@@ -2127,16 +2218,20 @@ button {
     height: 138.6% !important;
   }
 
-  /* Remaining general mobile styles */
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-  }
-  
-  .stat-card {
-    padding: 24px 16px !important;
+  /* FIX 10 & 11 — Re-agitate section arrow alignment */
+  .paragraph-arrow {
+    display: none !important;
   }
 
+  /* FIX 12 — Wave transition color bleed */
+  .about-section + .divider-angled svg path {
+    fill: #F5F5F0 !important;
+  }
+  .re-agitate-section + .divider-angled svg path {
+    fill: #FFFFFF !important;
+  }
+
+  /* Remaining general mobile styles */
   .about-content-wrapper {
     grid-template-columns: 1fr !important;
     gap: 48px !important;
@@ -2213,11 +2308,6 @@ button {
   .about-headline { font-size: 24px !important; }
   .re-agitate-headline { font-size: 26px !important; }
   .cta-main-heading { font-size: 26px !important; }
-  
-  .stats-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
 
   .card-item {
     padding: 24px !important;
