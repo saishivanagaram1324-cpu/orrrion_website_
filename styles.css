@@ -1960,9 +1960,12 @@ button {
     white-space: normal !important;
   }
   .stakes-headline .brushstroke-underline {
-    display: none !important;
+    display: block !important;
+    width: 90px !important;
+    bottom: -4px !important;
   }
   .stakes-headline .handwritten-wrapper {
+    font-size: inherit !important;
     text-decoration: none !important;
     border-bottom: none !important;
   }
@@ -1978,16 +1981,24 @@ button {
     width: auto !important;
     padding: 20px 16px !important;
   }
+  .stat-card .stat-number {
+    font-size: 32px !important;
+  }
 
   /* FIX 3 — Hand-drawn circle on $1,200 */
   .stat-card.stat-card-anchor {
-    padding: 8px !important;
+    padding: 28px 16px !important; /* 8px extra padding for breathing room */
   }
   .stat-card-anchor .hand-circle {
-    width: 178.2% !important; /* 148.5% * 1.2 */
-    height: 221.8% !important; /* 184.8% * 1.2 */
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 145% !important;
+    height: 180% !important;
     overflow: visible !important;
   }
+
 
   /* FIX 4 — Engineering outcomes headline */
   .system-headline-tier2 {
