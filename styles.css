@@ -158,6 +158,10 @@ button {
   transform: translateY(-2px) scale(1.02);
 }
 
+.mobile-only-btn {
+  display: none !important;
+}
+
 
 /* ==========================================
    SECTION 1 — HERO (NEW DESIGN)
@@ -1808,111 +1812,316 @@ button {
 }
 
 @media (max-width: 768px) {
-  :root {
-    --section-pad: 80px 0;
+  /* GLOBAL mobile rules — apply to all sections */
+  html, body, section, .hero, .pain-section, .stakes-section, .combined-system-section, .proof-section, .about-section, .re-agitate-section, .cta-section {
+    overflow-x: hidden !important;
   }
-
-  .hero-nav {
-    padding: 24px 0;
-  }
-
-  .hero-headline { font-size: 40px; }
-  .hero-subheadline { font-size: 16px; }
-  .pain-headline { font-size: 32px; }
   
+  .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  section, .hero, .pain-section, .stakes-section, .combined-system-section, .proof-section, .about-section, .re-agitate-section, .cta-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Font-size minimum 14px on all body text — nothing smaller on mobile */
+  .hero-disclaimer-1, 
+  .hero-disclaimer-2, 
+  .proof-card-caption, 
+  .footer p, 
+  .proof-stat-label, 
+  .calendly-placeholder-box span {
+    font-size: 14px !important;
+  }
+
+  /* Any element with position: absolute containing Architect or decorative objects: hide or force behind */
+  .cta-diamond-fg, 
+  .pain-rect-fg, 
+  .hero-circles-fg, 
+  .hero-red-tint {
+    display: none !important;
+  }
+
+  .divider-angled {
+    pointer-events: none !important;
+    z-index: -1 !important;
+  }
+
+  /* FIX 1 — Hero section */
+  .hero-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding-top: 100px !important; /* Stack columns */
+    gap: 0 !important;
+  }
+
+  .hero-text-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important; /* Container already handles side padding */
+    text-align: left !important;
+  }
+
+  .hero-headline {
+    font-size: 36px !important;
+    font-weight: 900 !important;
+    line-height: 1.15 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero-subheadline-p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+
+  .hero-tagline {
+    font-size: 15px !important;
+    white-space: nowrap !important;
+    margin-top: 16px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero-text-content .btn-solid.btn-rect {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 16px 24px !important;
+    display: block !important;
+  }
+
+  .hero-image-content {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+  }
+
+  .hero-illustration {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    margin-top: 32px !important;
+    z-index: 1 !important;
+    pointer-events: auto !important;
+    display: block !important;
+  }
+
+  /* FIX 2 — Engineering outcomes section */
+  .combined-grid-new {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .combined-left-col-new, 
+  .combined-right-col-new {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Remove existing large rounded CTA button entirely on mobile */
+  .desktop-only-btn {
+    display: none !important;
+  }
+
+  /* Show the correct sharp rectangle button */
+  .mobile-only-btn {
+    display: block !important;
+    background-color: #D94F35 !important;
+    color: #FFFFFF !important;
+    border-radius: 0 !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    padding: 14px 24px !important;
+    width: 100% !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .what-you-get-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .what-you-get-item {
+    padding: 16px !important;
+    flex: none !important;
+    width: 100% !important;
+  }
+
+  .wyget-title {
+    font-size: 13px !important;
+  }
+
+  .wyget-num {
+    font-size: 11px !important;
+  }
+
+  /* FIX 3 — Proof section */
+  .proof-split-new {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .proof-left-new, 
+  .proof-right-new {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .proof-right-new {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .proof-card-new {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .proof-card-new:nth-child(1),
+  .proof-card-new:nth-child(2),
+  .proof-card-new:nth-child(3) {
+    transform: none !important;
+    margin-top: 0 !important;
+  }
+
+  .proof-stat-num {
+    font-size: 40px !important;
+  }
+
+  .proof-stat-label {
+    font-size: 13px !important;
+    max-width: 100% !important;
+  }
+
+  .proof-headline-new {
+    font-size: 32px !important;
+  }
+
+  .proof-subhead-new,
+  .proof-headline-new,
+  .proof-label-new,
+  .proof-bottom-text,
+  .proof-landing,
+  .proof-link-new {
+    max-width: 100% !important;
+  }
+
+  /* Remaining general mobile styles */
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
   }
+  
   .stat-card {
-    padding: 32px 24px;
-  }
-
-  .solution-headline { font-size: 32px; }
-  .card-item {
-    padding: 32px;
-    top: calc(50vh - 140px);
-  }
-  .card-title { font-size: 22px; }
-
-  .proof-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    padding: 24px 16px !important;
   }
 
   .about-content-wrapper {
-    grid-template-columns: 1fr;
-    gap: 48px;
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
   }
+
   .team-section {
-    align-items: center;
-    margin-top: 0;
+    align-items: center !important;
+    margin-top: 0 !important;
   }
+
   .team-subheading {
-    text-align: center;
-    padding-right: 0;
-    margin-bottom: 24px;
+    text-align: center !important;
+    padding-right: 0 !important;
+    margin-bottom: 24px !important;
   }
+
   .team-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    padding-top: 0;
-    padding-right: 0;
-    width: 100%;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
   }
-  .team-cards::before {
-    display: none;
-  }
-  .tree-dot {
-    display: none;
-  }
-  .team-card {
-    flex-direction: row;
-    text-align: left;
-    width: 100%;
-    max-width: 320px;
-    justify-content: flex-start;
-    gap: 20px;
-  }
+
+  .team-cards::before, 
+  .tree-dot, 
   .team-card::after {
-    display: none;
+    display: none !important;
+  }
+
+  .team-card {
+    flex-direction: row !important;
+    text-align: left !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
   }
 
   .about-photo {
-    max-width: 320px;
-    margin: 0 auto;
+    max-width: 320px !important;
+    margin: 0 auto !important;
   }
 
   .re-agitate-section {
-    padding: 100px 0;
+    padding: 60px 0 !important;
   }
-  .re-agitate-headline { font-size: 32px; }
+
+  .re-agitate-headline {
+    font-size: 32px !important;
+  }
 
   .cta-grid-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 20px 24px;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding: 40px 0 !important;
   }
-  .cta-main-heading { font-size: 32px; }
-  .calendly-placeholder-box { height: 450px; }
+
+  .cta-main-heading {
+    font-size: 32px !important;
+  }
+
+  .calendly-placeholder-box {
+    height: 450px !important;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-headline { font-size: 48px; }
-  .pain-headline { font-size: 26px; }
-  .solution-headline { font-size: 26px; }
-  .proof-headline { font-size: 26px; }
-  .about-headline { font-size: 24px; }
-  .re-agitate-headline { font-size: 26px; }
-  .cta-main-heading { font-size: 26px; }
+  .hero-headline { font-size: 30px !important; }
+  .pain-headline { font-size: 26px !important; }
+  .solution-headline { font-size: 26px !important; }
+  .proof-headline-new { font-size: 26px !important; }
+  .about-headline { font-size: 24px !important; }
+  .re-agitate-headline { font-size: 26px !important; }
+  .cta-main-heading { font-size: 26px !important; }
   
   .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 2px;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
 
   .card-item {
-    padding: 24px;
+    padding: 24px !important;
   }
 }
