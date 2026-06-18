@@ -1824,14 +1824,15 @@ button {
     max-width: 100% !important;
   }
   
-  section, .hero, .pain-section, .stakes-section, .combined-system-section, .proof-section, .about-section, .re-agitate-section, .cta-section {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  section, .pain-section, .stakes-section, .combined-system-section, .proof-section, .about-section, .re-agitate-section, .cta-section {
+    padding: 60px 24px !important;
   }
 
   /* Font-size minimum 14px on all body text — nothing smaller on mobile */
+  p, span, a, li, .hero-disclaimer-1, .hero-disclaimer-2, .proof-card-caption, .footer p, .proof-stat-label, .calendly-placeholder-box span {
+    font-size: 14px;
+  }
+  
   .hero-disclaimer-1, 
   .hero-disclaimer-2, 
   .proof-card-caption, 
@@ -1855,18 +1856,35 @@ button {
   }
 
   /* FIX 1 — Hero section */
+  .hero {
+    padding: 24px 24px 60px 24px !important;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%) !important;
+    background-color: #050505 !important;
+  }
+  .hero::before, .hero::after {
+    display: none !important;
+  }
+  .hero-nav {
+    position: relative !important;
+    padding: 0 0 24px 0 !important;
+  }
+  .hero-nav .nav-container {
+    padding: 0 !important;
+  }
   .hero-container {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    padding-top: 100px !important; /* Stack columns */
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     gap: 0 !important;
   }
 
   .hero-text-content {
     width: 100% !important;
     max-width: 100% !important;
-    padding: 0 !important; /* Container already handles side padding */
+    padding: 0 !important;
     text-align: left !important;
   }
 
@@ -1886,7 +1904,7 @@ button {
 
   .hero-tagline {
     font-size: 15px !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
     margin-top: 16px !important;
     margin-bottom: 24px !important;
   }
@@ -1896,6 +1914,10 @@ button {
     text-align: center !important;
     padding: 16px 24px !important;
     display: block !important;
+  }
+
+  .hero-scroll-indicator {
+    display: none !important;
   }
 
   .hero-image-content {
@@ -1915,12 +1937,20 @@ button {
     max-width: 320px !important;
     height: auto !important;
     margin-top: 32px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     z-index: 1 !important;
     pointer-events: auto !important;
     display: block !important;
   }
 
-  /* FIX 2 — Engineering outcomes section */
+  /* FIX 2 — Search animation */
+  .pain-search-wrapper,
+  .pain-search-anim {
+    display: none !important;
+  }
+
+  /* FIX 3 — Engineering outcomes section */
   .combined-grid-new {
     grid-template-columns: 1fr !important;
     gap: 40px !important;
@@ -1957,14 +1987,15 @@ button {
   .what-you-get-list {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
-    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: 24px !important;
   }
 
   .what-you-get-item {
     padding: 16px !important;
     flex: none !important;
-    width: 100% !important;
+    width: auto !important;
+    margin: 0 !important;
   }
 
   .wyget-title {
@@ -1975,7 +2006,16 @@ button {
     font-size: 11px !important;
   }
 
-  /* FIX 3 — Proof section */
+  /* FIX 4 — Section 4 CTA padding */
+  .left-col-footer {
+    margin-bottom: 32px !important;
+  }
+
+  /* FIX 5 — Proof section */
+  .proof-bottom-arrow {
+    display: none !important;
+  }
+
   .proof-split-new {
     display: flex !important;
     flex-direction: column !important;
@@ -2007,6 +2047,30 @@ button {
     margin-top: 0 !important;
   }
 
+  /* Disable hover states on mobile */
+  .proof-card-new:hover,
+  .proof-right-new:hover .proof-card-new,
+  .proof-right-new:has(.proof-card-new:nth-child(1):hover) .proof-card-new:nth-child(1),
+  .proof-right-new:has(.proof-card-new:nth-child(1):hover) .proof-card-new:nth-child(2),
+  .proof-right-new:has(.proof-card-new:nth-child(1):hover) .proof-card-new:nth-child(3),
+  .proof-right-new:has(.proof-card-new:nth-child(2):hover) .proof-card-new:nth-child(1),
+  .proof-right-new:has(.proof-card-new:nth-child(2):hover) .proof-card-new:nth-child(2),
+  .proof-right-new:has(.proof-card-new:nth-child(2):hover) .proof-card-new:nth-child(3),
+  .proof-right-new:has(.proof-card-new:nth-child(3):hover) .proof-card-new:nth-child(1),
+  .proof-right-new:has(.proof-card-new:nth-child(3):hover) .proof-card-new:nth-child(2),
+  .proof-right-new:has(.proof-card-new:nth-child(3):hover) .proof-card-new:nth-child(3) {
+    transform: none !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+    z-index: 2 !important;
+  }
+
+  /* Touch active classes for mobile */
+  .proof-card-new.touch-active {
+    z-index: 10 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
+    transform: scale(1.02) !important;
+  }
+
   .proof-stat-num {
     font-size: 40px !important;
   }
@@ -2027,6 +2091,40 @@ button {
   .proof-landing,
   .proof-link-new {
     max-width: 100% !important;
+  }
+
+  /* FIX 6 — Section 6 CTA & Line */
+  .proof-section + .divider-angled,
+  .proof-section + .divider-angled svg {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .about-footer .mobile-only-btn {
+    border-radius: 0 !important;
+    width: 100% !important;
+    padding: 14px 24px !important;
+    background: #D94F35 !important;
+    color: #FFFFFF !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    display: block !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* FIX 7 — Hand-drawn circle size */
+  .hand-circle {
+    width: 148.5% !important;
+    height: 184.8% !important;
+  }
+  .re-agitate-headline .hand-circle {
+    width: 158.4% !important;
+    height: 138.6% !important;
   }
 
   /* Remaining general mobile styles */

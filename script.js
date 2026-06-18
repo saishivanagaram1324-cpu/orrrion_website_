@@ -225,3 +225,13 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCinematicText();
 
 });
+
+if (window.innerWidth <= 768) {
+  document.querySelectorAll('.proof-card-new').forEach(card => {
+    card.addEventListener('touchstart', function() {
+      this.classList.add('touch-active');
+      setTimeout(() => this.classList.remove('touch-active'), 600);
+    }, { passive: true });
+  });
+}
+
