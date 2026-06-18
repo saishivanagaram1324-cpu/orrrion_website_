@@ -2012,6 +2012,10 @@ button {
   .system-headline-tier2 .mobile-br {
     display: block !important;
   }
+  .system-headline-tier2 .highlight-circle,
+  .system-headline-tier2 .highlight-text {
+    font-size: inherit !important;
+  }
   .system-headline-tier2 .highlight-circle .hand-circle {
     position: absolute !important;
     top: 50% !important;
@@ -2072,6 +2076,7 @@ button {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 8px !important;
     margin-top: 24px !important;
+    margin-bottom: 12px !important; /* tiny bit of padding beneath cards & above CTA */
   }
 
   .what-you-get-item {
@@ -2093,8 +2098,9 @@ button {
 
   /* Section 4 CTA padding */
   .left-col-footer {
-    margin-bottom: 32px !important;
+    margin-bottom: 12px !important; /* reduce padding below CTA */
   }
+
 
   /* FIX 7, 8, 9 — Proof section */
   .proof-bottom-arrow {
